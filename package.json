@@ -1,7 +1,6 @@
 {
   "name": "react",
   "version": "1.0.0",
-  "prettier": "prettier-airbnb-config",
   "description": "",
   "main": "index.js",
   "scripts": {
