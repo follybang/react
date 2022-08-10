@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchField = props => {
+const Search = props => {
   const element = (
     <div className="search">
       <h1 className="search__title">{`Hello, ${props.name}. What to search for you?`}</h1>
@@ -14,4 +14,4 @@ const SearchField = props => {
   return element;
 };
 
-export default SearchField;
+export default Search;
