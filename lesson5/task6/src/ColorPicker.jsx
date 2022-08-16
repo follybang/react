@@ -1,32 +1,45 @@
 import React, { Component } from "react";
 
 class ColorPicker extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
+
     this.state = {
       color: "",
     };
   }
 
+  renderColor = color => {
+    this.setState({
+      color,
+    });
+  };
+
+  removeColor = () => {
+    this.setState({
+      color: "",
+    });
+  };
+
   render() {
     return (
       <div>
-        <div class="picker__title">{this.state.color}</div>
+        <div className="picker__title">{this.state.color}</div>
         <div>
           <button
-            onMouseEnter={() => this.setState({ color: "Coral" })}
-            onMouseLeave={() => this.setState({ color: "" })}
-            class="picker__button picker__button_coral"
+            onMouseEnter={() => this.renderColor("Coral")}
+            onMouseLeave={() => this.removeColor()}
+            className="picker__button picker__button_coral"
           ></button>
           <button
-            onMouseEnter={() => this.setState({ color: "Aqua" })}
-            onMouseLeave={() => this.setState({ color: "" })}
-            class="picker__button picker__button_aqua"
+            onMouseEnter={() => this.renderColor("Aqua")}
+            onMouseLeave={() => this.removeColor()}
+            className="picker__button picker__button_aqua"
           ></button>
           <button
-            onMouseEnter={() => this.setState({ color: "Bisque" })}
-            onMouseLeave={() => this.setState({ color: "" })}
-            class="picker__button picker__button_bisque"
+            onMouseEnter={() => this.renderColor("Bisque")}
+            onMouseLeave={() => this.removeColor()}
+            className="picker__button picker__button_bisque"
           ></button>
         </div>
       </div>
